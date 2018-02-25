@@ -1,0 +1,55 @@
+body {
+    font-family: 'Asar', serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #525252;
+    text-align: center;
+}
+html, body { 
+    width:auto; 
+    height:auto; 
+}
+.margin30{
+    margin-bottom:30px;
+}
+h1,h2,h3,h4,p{
+    font-family: 'Asar', serif;
+}
+h2 {
+    font-size:20px;
+    font-weight: bold;
+}
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+path:hover{
+    /* fill: black; */
+}
+#chart{
+    z-index:1;
+}
+.radial-tooltip {
+    width: 121px;
+    height: auto;
+    font: 14px sans-serif;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 3px 3px 3px 3px;
+	position:absolute;	
+    background-color: orange;
+   /* background-color: #33DDCC; */
+  	border-color: solid black 2px;
+    border-radius: 8px;			
+    pointer-events: none;
+    margin-left: 15px;
+    color:black;
+}
+label{
+    padding-top:20px;
+}
+#time-range{
+    padding-top: 20px;
+}
