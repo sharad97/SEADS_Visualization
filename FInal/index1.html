@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+        <title>Radial Heat Map</title>
+            <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
+
+    </head>
+    <body>
+        
+                <script src="https://d3js.org/d3.v3.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/d3-legend/1.13.0/d3-legend.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.1/jquery-ui.css" rel='stylesheet' type='text/css'>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.1/jquery-ui.structure.css" rel='stylesheet' type='text/css'>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.1/jquery-ui.theme.css" rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="main.css" />
+        
+                <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
+
+
+            <div class="tabtable">
+            <ul class="nav nav-tabs">
+                <li class="active"><a class="atab" href="#a_tab" data-toggle="tab">Panel One</a></li>
+                <li><a class="btab" href="#b_tab" data-toggle="tab">Panel Two</a></li>
+                <li><a class="ctab" href="#c_tab" data-toggle="tab">Panel Three</a></li>
+                <li><a class="dtab" href="#d_tab" data-toggle="tab">Panel S</a></li>
+                <li><a class="etab" href="#e_tab" data-toggle="tab">Panel G</a></li>
+
+                
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="a_tab">
+                    
+                    
+                    
+                 <div id="cont" class="container-fluid text-center">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>SEEDS VISUALIZATION</h1>
+                    <p>Energy Consumption Per Hour</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class = "col-md-3"></div>
+                <div class = "col-md-6">
+                    <div id="time-range">
+                        <h2><span id="slider-time"></span> to <span id="slider-time2"></span></h2>
+                        <div class="sliders_step1">
+                            <div id="slider-range"></div>
+                        </div>
+                    </div>
+                    <div><acontent></acontent></div>	                    
+
+                </div>
+                <div class = "col-md-3"></div>
+            </div>
+            <div class="row">
+                <div class = "col-md-3"></div>
+                <div class = "col-md-6">
+                    <h2>This visualization is created for non-profit organization,SEEDS, in collaboration with Ali Adabi and Abhiram Venkatesha</h2>
+                    <h2>Created by:</h2>
+                    <p>For Visulization: Sharad Shrestha</p>
+                    <p>For Data: by Karen Cariaga, Jakarin Srimakut, Sharad Shrestha</p>
+                    <p>For HTML: by Sharad Shrestha, Javier Juanillo</p>
+                    <h2>Source:</h2>
+                    <p><a href="http://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3">colorbrewer2.org</a></p>
+                    <p><a href="http://bl.ocks.org/arpitnarechania/b0bdc4f9a377ea9d8612677e12f65b82">Visulization example from bl.ocks</a></p>
+                    <p><a href="http://bl.ocks.org/widged/4561185">More visulization example from bl.ocks</a></p>
+                    <p><a href="http://prcweb.co.uk/lab/energy/">Visulization example from prcweb.co.uk</a></p>
+                    <p><a href="http://prcweb.co.uk/lab/circularheat/">More visulization example from prcweb.co.uk</a></p>
+                    <p><a href="http://prcweb.co.uk/lab/uktemperature/">More visulization example from prcweb.co.uk</a></p>
+                    <p><a href="https://stackoverflow.com/questions/43314115/d3-circular-heat-chart-increase-segment-height-on-mouseover">Visulization example from Stackoverflow</a></p>                    
+                </div>
+                <div class = "col-md-3">
+                </div>
+            </div>
+        </div>
+            
+            </div>                
+                
+                <div class="tab-pane" id="b_tab">
+                        
+
+                    
+            <div id="cont" class="container-fluid text-center">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>SEEDS VISUALIZATION</h1>
+                    <p>Energy Consumption Per Hour</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class = "col-md-3"></div>
+                <div class = "col-md-6">
+                    <div id="time-range">
+                        <h2><span id="1slider-time"></span> to <span id="1slider-time2"></span></h2>
+                        <div class="sliders_step1">
+                            <div id="1slider-range"></div>
+                        </div>
+                    </div>
+                    <div><bcontent></bcontent></div>	                    
+
+                </div>
+                <div class = "col-md-3"></div>
+            </div>
+            <div class="row">
+                <div class = "col-md-3"></div>
+                <div class = "col-md-6">
+                    <h2>This visualization is created for non-profit organization,SEEDS, in collaboration with Ali Adabi and Abhiram Venkatesha</h2>
+                    <h2>Created by:</h2>
+                    <p>For Visulization: Sharad Shrestha</p>
+                    <p>For Data: by Karen Cariaga, Jakarin Srimakut, Sharad Shrestha</p>
+                    <p>For HTML: by Sharad Shrestha, Javier Juanillo</p>
+                    <h2>Source:</h2>
+                    <p><a href="http://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3">colorbrewer2.org</a></p>
+                    <p><a href="http://bl.ocks.org/arpitnarechania/b0bdc4f9a377ea9d8612677e12f65b82">Visulization example from bl.ocks</a></p>
+                    <p><a href="http://bl.ocks.org/widged/4561185">More visulization example from bl.ocks</a></p>
+                    <p><a href="http://prcweb.co.uk/lab/energy/">Visulization example from prcweb.co.uk</a></p>
+                    <p><a href="http://prcweb.co.uk/lab/circularheat/">More visulization example from prcweb.co.uk</a></p>
+                    <p><a href="http://prcweb.co.uk/lab/uktemperature/">More visulization example from prcweb.co.uk</a></p>
+                    <p><a href="https://stackoverflow.com/questions/43314115/d3-circular-heat-chart-increase-segment-height-on-mouseover">Visulization example from Stackoverflow</a></p>                    
+                </div>
+                <div class = "col-md-3">
+                </div>
+            </div>
+        </div>
+                    
+                    
+                    
+                    
+            </div>
+                
+                <div class="tab-pane" id="c_tab">
+                
+            
+                    <div id="cont" class="container-fluid text-center">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>SEEDS VISUALIZATION</h1>
+                    <p>Energy Consumption Per Hour</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class = "col-md-3"></div>
+                <div class = "col-md-6">
+                    <div id="time-range">
+                        <h2><span id="2slider-time"></span> to <span id="2slider-time2"></span></h2>
+                        <div class="sliders_step1">
+                            <div id="2slider-range"></div>
+                        </div>
+                    </div>
+                    <div><ccontent></ccontent></div>	                    
+
+                </div>
+                <div class = "col-md-3"></div>
+            </div>
+            <div class="row">
+                <div class = "col-md-3"></div>
+                <div class = "col-md-6">
+                    <h2>This visualization is created for non-profit organization,SEEDS, in collaboration with Ali Adabi and Abhiram Venkatesha</h2>
+                    <h2>Created by:</h2>
+                    <p>For Visulization: Sharad Shrestha</p>
+                    <p>For Data: by Karen Cariaga, Jakarin Srimakut, Sharad Shrestha</p>
+                    <p>For HTML: by Sharad Shrestha, Javier Juanillo</p>
+                    <h2>Source:</h2>
+                    <p><a href="http://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3">colorbrewer2.org</a></p>
+                    <p><a href="http://bl.ocks.org/arpitnarechania/b0bdc4f9a377ea9d8612677e12f65b82">Visulization example from bl.ocks</a></p>
+                    <p><a href="http://bl.ocks.org/widged/4561185">More visulization example from bl.ocks</a></p>
+                    <p><a href="http://prcweb.co.uk/lab/energy/">Visulization example from prcweb.co.uk</a></p>
+                    <p><a href="http://prcweb.co.uk/lab/circularheat/">More visulization example from prcweb.co.uk</a></p>
+                    <p><a href="http://prcweb.co.uk/lab/uktemperature/">More visulization example from prcweb.co.uk</a></p>
+                    <p><a href="https://stackoverflow.com/questions/43314115/d3-circular-heat-chart-increase-segment-height-on-mouseover">Visulization example from Stackoverflow</a></p>                    
+                </div>
+                <div class = "col-md-3">
+                </div>
+            </div>
+        </div>
+                    
+                </div>
+                
+                
+                <div class="tab-pane" id="d_tab">
+                
+                
+                                    
+            
+                    <div id="cont" class="container-fluid text-center">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>SEEDS VISUALIZATION</h1>
+                    <p>Energy Consumption Per Hour</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class = "col-md-3"></div>
+                <div class = "col-md-6">
+                    <div id="time-range">
+                        <h2><span id="3slider-time"></span> to <span id="3slider-time2"></span></h2>
+                        <div class="sliders_step1">
+                            <div id="3slider-range"></div>
+                        </div>
+                    </div>
+                    <div><dcontent></dcontent></div>	                    
+
+                </div>
+                <div class = "col-md-3"></div>
+            </div>
+            <div class="row">
+                <div class = "col-md-3"></div>
+                <div class = "col-md-6">
+                    <h2>This visualization is created for non-profit organization,SEEDS, in collaboration with Ali Adabi and Abhiram Venkatesha</h2>
+                    <h2>Created by:</h2>
+                    <p>For Visulization: Sharad Shrestha</p>
+                    <p>For Data: by Karen Cariaga, Jakarin Srimakut, Sharad Shrestha</p>
+                    <p>For HTML: by Sharad Shrestha, Javier Juanillo</p>
+                    <h2>Source:</h2>
+                    <p><a href="http://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3">colorbrewer2.org</a></p>
+                    <p><a href="http://bl.ocks.org/arpitnarechania/b0bdc4f9a377ea9d8612677e12f65b82">Visulization example from bl.ocks</a></p>
+                    <p><a href="http://bl.ocks.org/widged/4561185">More visulization example from bl.ocks</a></p>
+                    <p><a href="http://prcweb.co.uk/lab/energy/">Visulization example from prcweb.co.uk</a></p>
+                    <p><a href="http://prcweb.co.uk/lab/circularheat/">More visulization example from prcweb.co.uk</a></p>
+                    <p><a href="http://prcweb.co.uk/lab/uktemperature/">More visulization example from prcweb.co.uk</a></p>
+                    <p><a href="https://stackoverflow.com/questions/43314115/d3-circular-heat-chart-increase-segment-height-on-mouseover">Visulization example from Stackoverflow</a></p>                    
+                </div>
+                <div class = "col-md-3">
+                </div>
+            </div>
+        </div>
+                    
+                
+                </div>
+                
+                
+                <div class="tab-pane" id="e_tab">
+                
+                
+                                
+                    <div id="cont" class="container-fluid text-center">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>SEEDS VISUALIZATION</h1>
+                    <p>Energy Consumption Per Hour</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class = "col-md-3"></div>
+                <div class = "col-md-6">
+                    <div id="time-range">
+                        <h2><span id="4slider-time"></span> to <span id="4slider-time2"></span></h2>
+                        <div class="sliders_step1">
+                            <div id="4slider-range"></div>
+                        </div>
+                    </div>
+                    <div><econtent></econtent></div>	                    
+
+                </div>
+                <div class = "col-md-3"></div>
+            </div>
+            <div class="row">
+                <div class = "col-md-3"></div>
+                <div class = "col-md-6">
+                    <h2>This visualization is created for non-profit organization,SEEDS, in collaboration with Ali Adabi and Abhiram Venkatesha</h2>
+                    <h2>Created by:</h2>
+                    <p>For Visulization: Sharad Shrestha</p>
+                    <p>For Data: by Karen Cariaga, Jakarin Srimakut, Sharad Shrestha</p>
+                    <p>For HTML: by Sharad Shrestha, Javier Juanillo</p>
+                    <h2>Source:</h2>
+                    <p><a href="http://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3">colorbrewer2.org</a></p>
+                    <p><a href="http://bl.ocks.org/arpitnarechania/b0bdc4f9a377ea9d8612677e12f65b82">Visulization example from bl.ocks</a></p>
+                    <p><a href="http://bl.ocks.org/widged/4561185">More visulization example from bl.ocks</a></p>
+                    <p><a href="http://prcweb.co.uk/lab/energy/">Visulization example from prcweb.co.uk</a></p>
+                    <p><a href="http://prcweb.co.uk/lab/circularheat/">More visulization example from prcweb.co.uk</a></p>
+                    <p><a href="http://prcweb.co.uk/lab/uktemperature/">More visulization example from prcweb.co.uk</a></p>
+                    <p><a href="https://stackoverflow.com/questions/43314115/d3-circular-heat-chart-increase-segment-height-on-mouseover">Visulization example from Stackoverflow</a></p>                    
+                </div>
+                <div class = "col-md-3">
+                </div>
+            </div>
+        </div>
+                    
+                
+                
+                </div>
+                
+                
+            </div>
+            </div>
+
+        <script>
+            $.ajaxSetup ({
+                // Disable caching of AJAX responses
+                // Used when debugging
+                cache: false
+            });
+
+               $.getScript("a.js");
+            $(".atab").click(function() {
+                $.getScript("a.js");
+            })
+        </script>
+        <script>
+            $(".btab").click(function() {
+                 $.getScript("b.js");
+            })
+        </script>
+                <script>
+            $(".ctab").click(function() {
+                 $.getScript("c.js");
+            })
+        </script>
+                        <script>
+            $(".dtab").click(function() {
+                 $.getScript("d.js");
+            })
+        </script>
+        
+                                <script>
+            $(".etab").click(function() {
+                 $.getScript("e.js");
+            })
+        </script>
+
+    </body>
+</html>
