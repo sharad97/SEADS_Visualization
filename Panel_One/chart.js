@@ -5,7 +5,7 @@ d3.circularHeat= function module() {
 			bottom: 50,
 			left: 100
 		};
-    var width = 750 - margin.left - margin.right;
+    var width = 950 - margin.left - margin.right;
     var height = width;
     var format = d3.time.format("%Y-%m-%d");
 	
