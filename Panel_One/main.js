@@ -122,7 +122,7 @@ function mouseover(svg,index,innerRadius,numSegments,segmentHeight,passedData){
         var targetIndex = Math.floor(i / numSegments); //the layer you are hovering
         var zoomSize = 20; //inner 5px and outer 5px
 		var layerCnt = passedData.length / numSegments; //layer count, number of layers
-        if(data.length < 1400){
+        if(data.length < 400){
             d3.selectAll("path.segment"+index) //.arc indicates segment
                 .transition()
                 .duration(200)
