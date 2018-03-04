@@ -50,7 +50,7 @@ svg.append("g")
 
 var legendV = d3.legend.color()
         .shapeWidth(30)
-        .cells(12)
+        .cells(6)
      // .labelFormat(d3.format('.3f'))
         .scale(linearV)
         .title("in KWh");
