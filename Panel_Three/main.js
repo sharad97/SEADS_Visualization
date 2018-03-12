@@ -239,7 +239,7 @@ function drawSlider(passedData){
 	function formatDT(__dt) {
         var year = __dt.getFullYear();
         var month = zeroPad(__dt.getMonth()+1, 2);
-        var date = zeroPad(__dt.getDate(), 2);
+        var date = zeroPad(__dt.getDate()+1, 2);
         return year + '-' + month + '-' + date ;
     };
     
@@ -269,13 +269,13 @@ function filterData(start,end){
 	//called by slider drag stop event
 	//calls updateChart
 	//console.log(data);
-	filtered = datasetDisplayed.filter(function(d){ return d.Day >=  start && d.Day <= end; }) //why data and not dataDisplayed?
+	filtered = datasetDisplayed.filter(function(d){ return d.Day >=  start && d.Day <= end; }) 
 	//console.log(filtered);
 	radial_labels = [];
 	getRadialLabels(filtered);
 	updateChart(filtered,radial_labels);
 	dataDisplayed = filtered;
-	segmentHeight = (500 - 2 * innerRadius) / (2 * radial_labels.length);// should make this dynamic
+	segmentHeight = (500 - 2 * innerRadius) / (2 * radial_labels.length);
     index=0;
     chart.on("customHover", mouseover(svg,index,innerRadius,numSegments,segmentHeight,dataDisplayed));
 }
