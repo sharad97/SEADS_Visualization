@@ -13,7 +13,7 @@ var index_one = 0;
 
 //draw first chart
 var chart = d3.circularHeat()
-        .domain([-5.0, -4.5, -4.0, -3.5, -3.0 , -2.5, -2.0, -1.5, -1.0, -0.5, 0 , 0.5])
+        .domain([0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0 ,3.5, 4.0, 4.5, 5.0])
         .range(range_blue)
         .radialLabels(radial_labels)
         .segmentLabels(segment_labels)
@@ -39,7 +39,7 @@ chart.on("customHover", mouseover(svg, index_one, innerRadius, numSegments, segm
 
 // legend
 var linearV = d3.scale.linear()
-        .domain([-5.0, -4.5, -4.0, -3.5, -3.0 , -2.5, -2.0, -1.5, -1.0, -0.5, 0 , 0.5])
+        .domain([0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0 ,3.5, 4.0, 4.5, 5.0])
         .range(range_blue); // color for range
 
 var svg = d3.select("svg");
@@ -50,7 +50,7 @@ svg.append("g")
 
 var legendV = d3.legend.color()
         .shapeWidth(30)
-        .cells(12)
+        .cells(11)
      // .labelFormat(d3.format('.3f'))
         .scale(linearV)
         .title("in KWh");
@@ -91,7 +91,7 @@ var getTooltipHTML = function (d) {
 
 function swapDataset(passedData, radiallabels) {
     chart.radialLabels(radiallabels)
-         .domain([-5.0, -4.5, -4.0, -3.5, -3.0 , -2.5, -2.0, -1.5, -1.0, -0.5, 0 , 0.5])
+         .domain([0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0 ,3.5, 4.0, 4.5, 5.0])
          .range(range_blue);
 	d3.select("#chart")
         .datum(passedData)
@@ -109,7 +109,7 @@ function getRadialLabels(passedData) {
 //update viz
 function updateChart(passedData,radiallabels){
 	chart.radialLabels(radiallabels)
-         .domain([-5.0, -4.5, -4.0, -3.5, -3.0 , -2.5, -2.0, -1.5, -1.0, -0.5, 0 , 0.5])
+         .domain([0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0 ,3.5, 4.0, 4.5, 5.0])
          .range(range_blue);
 	d3.select("#chart")
       .datum(passedData)
