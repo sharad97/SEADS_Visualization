@@ -8,7 +8,19 @@ drawSlider(dataDisplayed);
 var segment_labels = ["Midnight", "1am", "2am", "3am", "4am", "5am", "6am", "7am", "8am", "9am", "10am",
                       "11am", "Midday", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm", "8pm", "9pm", "10pm", "11pm"];
 var numSegments = segment_labels.length;// label length is 24 as 24 hours 
-var range_blue = ["#fee0d2", "#fc9272", "#de2d26"]; //color for data
+var range_blue = [
+"#F8DDC0",
+"#FAC4A6",
+"#F8AB8F",
+"#F29479",
+"#E97D65",
+"#DD6853",
+"#CF5342",
+"#BE3F34",
+"#AB2B26",
+"#97181B",
+"#820211"
+]; //color for data
 var index_one = 0;
 
 //draw first chart
