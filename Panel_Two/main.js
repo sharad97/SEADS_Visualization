@@ -8,12 +8,21 @@ drawSlider(dataDisplayed);
 var segment_labels = ["Midnight", "1am", "2am", "3am", "4am", "5am", "6am", "7am", "8am", "9am", "10am",
                       "11am", "Midday", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm", "8pm", "9pm", "10pm", "11pm"];
 var numSegments = segment_labels.length;// label length is 24 as 24 hours 
-var range_blue = ["#fee0d2", "#fc9272", "#de2d26"]; //color for data
+var range_blue = [ 
+"#F8DDC0",
+"#FAB99C",
+"#F4977C",
+"#E67760",
+"#D35947",
+"#BB3C32",
+"#A02020",
+"#820211"
+]; //color for data
 var index_one = 0;
 
 //draw first chart
 var chart = d3.circularHeat()
-        .domain([-3.5, -3.0 , -2.5, -2.0, -1.5, -1.0, -0.5, 0])
+        .domain([0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0 ,3.5])
         .range(range_blue)
         .radialLabels(radial_labels)
         .segmentLabels(segment_labels)
@@ -39,7 +48,7 @@ chart.on("customHover", mouseover(svg, index_one, innerRadius, numSegments, segm
 
 // legend
 var linearV = d3.scale.linear()
-        .domain([-3.5, -3.0 , -2.5, -2.0, -1.5, -1.0, -0.5, 0])
+        .domain([0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0 ,3.5])
         .range(range_blue); // color for range
 
 var svg = d3.select("svg");
@@ -91,7 +100,7 @@ var getTooltipHTML = function (d) {
 
 function swapDataset(passedData, radiallabels) {
     chart.radialLabels(radiallabels)
-         .domain([-3.5, -3.0 , -2.5, -2.0, -1.5, -1.0, -0.5, 0])
+         .domain([0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0 ,3.5])
          .range(range_blue);
 	d3.select("#chart")
         .datum(passedData)
@@ -109,7 +118,7 @@ function getRadialLabels(passedData) {
 //update viz
 function updateChart(passedData,radiallabels){
 	chart.radialLabels(radiallabels)
-         .domain([-3.5, -3.0 , -2.5, -2.0, -1.5, -1.0, -0.5, 0])
+         .domain([0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0 ,3.5])
          .range(range_blue);
 	d3.select("#chart")
       .datum(passedData)
