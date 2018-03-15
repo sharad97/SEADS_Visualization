@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<script src="https://d3js.org/d3.v3.js"></script>
+
+<style>
+    .margin30 {
+  margin-bottom: 30px;
+}
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+path:hover {
+  fill: white;
+}
+.tooltip {
+  background: #eee;
+  box-shadow: 0 0 5px #999999;
+  color: #333;
+  font-size: 12px;
+  left: 130px;
+  padding: 10px;
+  position: absolute;
+  text-align: center;
+  top: 95px;
+  z-index: 10;
+  display: block;
+  opacity: 0;
+}
+</style>
+    </head>
+<body>
+    <H1>Seeds' Hourly Energy Consumption From 02/01/2018 to 02/07/2018 </H1>
+    <p>source:</p>
+    <p>For Data: "http://egauge18646.egaug.es/" and edited using excel</p>
+    <p>For color: "http://colorbrewer2.org/#type=sequential&scheme=OrRd&n=3"</p>
+    <p>For visulization: "http://prcweb.co.uk/lab/circularheat/" </p>
+<div id="cont" class="container-fluid text-center">
+
+  <div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-6">
+      <div id="chart"></div>
+    </div>
+    <div class="col-md-3">
+    </div>
+  </div>
+</div>
+    <script src="index.js"></script>
+  </body>
+</html>
