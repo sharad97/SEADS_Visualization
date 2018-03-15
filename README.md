@@ -1,6 +1,6 @@
 # SEADS_Visualization
 
-FINAL VISUALIZATION (All 6 visulization added in one using tab function):
+FINAL VISUALIZATION (All 6 visulization added in one HTML using tab function):
 https://sharad97.github.io/SEADS_Visualization/FInal/index.html
 <br/>
 <br/>
