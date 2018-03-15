@@ -6,31 +6,39 @@ https://sharad97.github.io/SEADS_Visualization/FInal/index.html
 
 
 
+
 PROTOTYPES:
+
+
 
 Radial chart complete with features and data implemented:
 
-https://sharad97.github.io/SEADS_Visualization/Chart1/index.html
 
-https://sharad97.github.io/SEADS_Visualization/Panel_G/index.html
+Overall Energy Consumption: https://sharad97.github.io/SEADS_Visualization/Chart1/index.html
 
-https://sharad97.github.io/SEADS_Visualization/Panel_S/index.html
+Generator: https://sharad97.github.io/SEADS_Visualization/Panel_G/index.html
 
-https://sharad97.github.io/SEADS_Visualization/Panel_One/index.html
+Solar: https://sharad97.github.io/SEADS_Visualization/Panel_S/index.html
 
-https://sharad97.github.io/SEADS_Visualization/Panel_Two/index.html
+Water Heater Energy Use: https://sharad97.github.io/SEADS_Visualization/Panel_One/index.html
 
-https://sharad97.github.io/SEADS_Visualization/Panel_Three/index.html
+AC Energy Use: https://sharad97.github.io/SEADS_Visualization/Panel_Two/index.html
+
+Kitchen Energy Use: https://sharad97.github.io/SEADS_Visualization/Panel_Three/index.html
+
 
 
 Features added to radial chart:
+
 
 Radial Chart with slider https://sharad97.github.io/SEADS_Visualization/radial_chart/index.html
 
 Radial Chart with legend https://sharad97.github.io/SEADS_Visualization/radial_legend/indexfinal.html
 
 
+
 These charts helped to decide which chart to use:
+
 
 Radial Chart https://sharad97.github.io/SEADS_Visualization/RadialChart-pie/indexfinal.html
 
