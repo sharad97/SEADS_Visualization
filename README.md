@@ -6,7 +6,8 @@ https://sharad97.github.io/SEADS_Visualization/FInal/index.html
 <br/>
 
 MORE DATA AND 6 VISUALIZATIONS:
-Radial chart complete with features and data implemented:
+
+Radial chart with features and data implemented:
 
 Overall Energy Consumption: https://sharad97.github.io/SEADS_Visualization/Chart1/index.html
 
