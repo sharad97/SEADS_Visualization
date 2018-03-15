@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<script src="https://d3js.org/d3.v3.js"></script>
+      <script src = "https://cdnjs.cloudflare.com/ajax/libs/d3-legend/1.13.0/d3-legend.min.js"></script>
+
+<style>
+    .margin30 {
+  margin-bottom: 30px;
+}
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+path:hover {
+}
+.tooltip {
+  background: #eee;
+  box-shadow: 0 0 5px #999999;
+  color: #333;
+  font-size: 12px;
+  left: 130px;
+  padding: 10px;
+  position: absolute;
+  text-align: center;
+  top: 95px;
+  z-index: 10;
+  display: block;
+  opacity: 0;
+}
+    
+p{
+    font-weight: bold;
+    text-decoration: underline;
+        
+    }
+</style>
+    </head>
+<body>
+    <H1>Seeds' Hourly Energy Consumption From 02/01/2018 to 02/07/2018 </H1>
+
+<div id="cont" class="container-fluid text-center">
+
+  <div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-6">
+      <div id="chart"></div>
+    </div>
+    <div class="col-md-3">
+    </div>
+  </div>
+</div>
+    <script src="index.js"></script>
+    <script src="data.js"></script>
+    <script src="legend.js"></script>
+
+    
+    <p>Source:</p>
+    <p>For Data:</p>
+    <a href="http://egauge18646.egaug.es/">http://egauge18646.egaug.es/</a> (Data is edited using excel)
+    <p>For color: </p>
+    <a href="http://colorbrewer2.org/#type=sequential&scheme=OrRd&n=3">http://colorbrewer2.org/#type=sequential&scheme=OrRd&n=3</a>
+    <p>For visulization: </p>
+    <a href="http://prcweb.co.uk/lab/circularheat/">http://prcweb.co.uk/lab/circularheat/</a><br/>
+    <a href="http://bl.ocks.org/arpitnarechania/b0bdc4f9a377ea9d8612677e12f65b82">http://bl.ocks.org/arpitnarechania/b0bdc4f9a377ea9d8612677e12f65b82</a>
+    
+  </body>
+</html>
