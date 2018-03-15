@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style> /* set the CSS */
+
+body { font: 12px Arial;}
+
+path {
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+      
+}
+
+
+
+</style>
+<body>
+
+<!-- load the d3.js library -->
+<script type="text/javascript" src="//d3js.org/d3.v3.min.js"></script>
+<script>
+
+    // Set the dimensions of the canvas / graph
+var margin = {top: 30, right: 20, bottom: 30, left: 50},
+    width = 1300 - margin.left - margin.right,
+    height = 700 - margin.top - margin.bottom;
+
+
+
+    // Parse the date / time
+    var parseDate = d3.time.format("%Y-%m-%d %X").parse; //27-May-12 16:00:00. This is used for D3JS parsing
+    var formatTime = d3.time.format("%Y-%m-%d %X");// Format tooltip date / time
+
+    // Set the ranges
+    var x = d3.time.scale().range([0, width]);
+    
+    var y = d3.scale.linear().range([height, 0]);
+
+    // Define the axes
+    var xAxis = d3.svg.axis()
+        .scale(x)
+        .orient("bottom").ticks(24);
+
+    var yAxis = d3.svg.axis()
+        .scale(y)
+        .orient("left").ticks(10);
+    
+var tooltip = d3.select("body")
+    .append("div")
+    .style("position", "absolute")
+    .style("z-index", "10")
+    .style("visibility", "hidden")
+    .style("background", "lightsteelblue")
+    .text("a simple tooltip");
+    
+
+    // Adds the svg canvas
+    var svg = d3.select("body")
+        .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform",
+            "translate(" + margin.left + "," + margin.top + ")");
+    
+    //var colour = d3.scale.category20();
+    //["#feedde", "#fdbe85", "#fd8d3c", "#e6550d", "#a63603"];
+    var colour = d3.scale.threshold()
+    .domain([1, 10, 50, 100, 500, 1000, 2000, 5000])
+    .range(["#f7fcfd", "#e5f5f9", "#ccece6", "#99d8c9", "#66c2a4", "#41ae76", "#238b45", "#006d2c", "#00441b"]);
+
+    // Get the data
+    d3.csv("data.csv", function(error, data) {
+        data.forEach(function(d) {
+            d.date = parseDate(d.date); // UTC time and formatting for D3
+            d.close = +d.close;
+        });
+
+        // Scale the range of the data
+        x.domain(d3.extent(data, function(d) { return d.date; }));
+        y.domain([0, d3.max(data, function(d) { return d.close; })]);
+
+       
+
+        // draw the scatterplot
+        svg.selectAll("dot")
+            .data(data)
+            .enter().append("circle")
+            .attr("cx", function(d) { return x(d.date); })
+            .attr("cy", function(d) { return y(d.close); })
+            .attr("r", function(d) { return 10; })
+            .style("fill", function(d, i) { return colour(i); })
+            .style("stroke", "green")
+        
+            // Tooltip stuff after this
+            .on("mouseover", function(d){tooltip.html("Date: "+d.date +"<br/>"+"Energy: " +d.close); return tooltip.style("visibility", "visible");})
+            .on("mousemove", function(){return tooltip.style("top", (d3.event.pageY-10)+"px").style("left",(d3.event.pageX+10)+"px");})
+            .on("mouseout", function(){return tooltip.style("visibility", "hidden");});
+
+        // Add the X Axis
+        svg.append("g")
+            .attr("class", "x axis")
+            .attr("transform", "translate(0," + height + ")")
+            .call(xAxis);
+
+        // Add the Y Axis
+        svg.append("g")
+            .attr("class", "y axis")
+            .call(yAxis);
+
+    });
+
+</script>
+</body>
