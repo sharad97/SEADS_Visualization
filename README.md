@@ -4,8 +4,6 @@ FINAL VISUALIZATION:
 https://sharad97.github.io/SEADS_Visualization/FInal/index.html
 <br/>
 <br/>
-<br/>
-<br/>
 
 
 PROTOTYPES:
@@ -13,11 +11,8 @@ PROTOTYPES:
 <br/>
 
 Radial chart complete with features and data implemented:
-<br/>
-<br/>
 
 Overall Energy Consumption: https://sharad97.github.io/SEADS_Visualization/Chart1/index.html
-<br/>
 
 Generator: https://sharad97.github.io/SEADS_Visualization/Panel_G/index.html
 
@@ -28,11 +23,10 @@ Water Heater Energy Use: https://sharad97.github.io/SEADS_Visualization/Panel_On
 AC Energy Use: https://sharad97.github.io/SEADS_Visualization/Panel_Two/index.html
 
 Kitchen Energy Use: https://sharad97.github.io/SEADS_Visualization/Panel_Three/index.html
+<br/>
+<br/>
 
 Features added to radial chart:
-<br/>
-<br/>
-
 
 Radial Chart with slider https://sharad97.github.io/SEADS_Visualization/radial_chart/index.html
 
