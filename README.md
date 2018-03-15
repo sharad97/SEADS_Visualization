@@ -24,14 +24,12 @@ Kitchen Energy Use: https://sharad97.github.io/SEADS_Visualization/Panel_Three/i
 <br/>
 
 PROTOTYPES:
-<br/>
-<br/>
+
 Features added to radial chart:
 
 Radial Chart with slider https://sharad97.github.io/SEADS_Visualization/radial_chart/index.html
 
 Radial Chart with legend https://sharad97.github.io/SEADS_Visualization/radial_legend/indexfinal.html
-
 <br/>
 <br/>
 
