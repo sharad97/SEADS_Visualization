@@ -1,15 +1,11 @@
 # SEADS_Visualization
 
-FINAL VISUALIZATION:
+FINAL VISUALIZATION (All 6 visulization added in one using tab function):
 https://sharad97.github.io/SEADS_Visualization/FInal/index.html
 <br/>
 <br/>
 
-
-PROTOTYPES:
-<br/>
-<br/>
-
+MORE DATA AND 6 VISUALIZATIONS:
 Radial chart complete with features and data implemented:
 
 Overall Energy Consumption: https://sharad97.github.io/SEADS_Visualization/Chart1/index.html
@@ -26,11 +22,17 @@ Kitchen Energy Use: https://sharad97.github.io/SEADS_Visualization/Panel_Three/i
 <br/>
 <br/>
 
+PROTOTYPES:
+<br/>
+<br/>
 Features added to radial chart:
 
 Radial Chart with slider https://sharad97.github.io/SEADS_Visualization/radial_chart/index.html
 
 Radial Chart with legend https://sharad97.github.io/SEADS_Visualization/radial_legend/indexfinal.html
+
+<br/>
+<br/>
 
 These charts helped to decide which chart to use:
 
