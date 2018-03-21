@@ -1,56 +1,307 @@
-body {
-    font-family: 'Asar', serif;
-    font-size: 14px;
-    font-weight: 400;
-    color: #525252;
-    text-align: center;
+body { 
+  color: #666; 
+  background: white; 
+  font: normal 10px "Helvetica Neue", Helvetica, sans-serif; 
+  margin:auto;
+  position: relative;
+  text-align: center;	
 }
-html, body { 
-    width:auto; 
-    height:auto; 
+
+/*
+#map {
+  border:2px solid #000;
+  margin: auto; 	
 }
-.margin30{
-    margin-bottom:30px;
-}
-h1,h2,h3,h4,p{
-    font-family: 'Asar', serif;
-}
-h2 {
-    font-size:20px;
-    font-weight: bold;
-}
-.axis path,
-.axis line {
-    fill: none;
-    stroke: #000;
-    shape-rendering: crispEdges;
-}
-path:hover{
-    /* fill: black; */
-}
-#chart{
-    z-index:1;
-}
-.radial-tooltip {
-    width: 121px;
+*/
+
+
+.tooltip {
+	width: 221px;
     height: auto;
     font: 14px sans-serif;
     font-weight: bold;
     border-radius: 5px;
     padding: 3px 3px 3px 3px;
-	position:absolute;	
-    background-color: orange;
-   /* background-color: #33DDCC; */
-  	border-color: solid black 2px;
+	position:absolute;			
+    background: SeaGreen;	
+  	border: solid black 2px;
     border-radius: 8px;			
     pointer-events: none;
     margin-left: 15px;
-    color:black;
+    color:white;
 }
-label{
-    padding-top:20px;
+
+.tooltip b{
+  /* padding:5px;
+*/
 }
-#time-range{
-    padding-left: 200px;
-    padding-right: 200px;
+
+.tooltip tr td{
+ /* padding:5px;
+*/
 }
+
+
+.country {
+  fill: #41ae76;
+  stroke: #fff;
+  stroke-width: .5px;
+  stroke-linejoin: round;
+  cursor: pointer;
+}
+
+.country:hover{
+	fill:lightgreen;
+}
+
+.hidden { 
+  display: none; 
+}
+
+
+path {
+  fill: none;
+  stroke: #333;
+  stroke-width: .5px;
+}
+
+.land-boundary {
+  stroke-width: 1px;
+}
+
+.county-boundary {
+  stroke: #ddd;
+}
+
+.site {
+	fill: red;
+    stroke-width: 0.7px;
+    stroke: black;
+	opacity: 0.9;
+}
+
+
+.site:hover {
+  fill: black ;
+}
+
+.dot{
+    stroke:black;
+    stroke-width:0.7px;
+}
+
+#slider3 {
+  margin: 25px auto 40px auto;
+  width: 900px;
+}
+
+
+.tectonic {
+  fill: none;
+  stroke: red;
+  opacity: 0.9;
+}
+
+
+.sphere {
+    fill: #bbb;
+}
+
+
+.overlay {
+    fill: none;
+    pointer-events: all;
+}
+
+
+.water {
+  fill: #ccece6;
+}
+
+
+.land {
+  fill: #41ae76;
+  stroke: green;
+  stroke-width: 0.7px;
+}
+
+
+.focused {
+  fill: lightgreen;
+}
+
+
+
+
+.countryTooltip {
+  position: absolute;
+  display: none;
+  pointer-events: none;
+  background: #fff;
+  padding: 5px;
+  text-align: left;
+  border: solid #ccc 1px;
+  color: #666;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+
+#cool {
+    border: 1px solid lightgray;
+    margin: auto;
+}
+
+
+
+#footer{
+    background: lightgray;
+    border: 1px solid black;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+}
+
+/*
+#coll{
+    margin-left: auto;
+}
+
+#coll1{
+    margin-left: -20px;
+}
+*/
+
+h1{
+    font-family:inherit;
+    font-style: normal;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    margin-top: 0;
+    color: black;
+    text-align: center;
+}
+
+
+
+h3 {
+     font-size: 15px;
+     text-align: center;
+  }
+
+
+
+h4 {
+     font-size: 15px;
+     text-align: center;
+  }
+
+
+
+p{
+    font-size: 13px;
+    padding-left: 10px;
+}
+
+
+
+p2{
+    font-size: 12px;
+    text-align: center;
+
+}
+
+table{
+    margin: auto;
+}
+
+
+a:link {
+    color: green;
+}
+
+
+
+/* visited link */
+a:visited {
+    color: blue;
+}
+
+
+
+/* mouse over link */
+a:hover {
+    color: red;
+}
+
+
+
+/* selected link */
+a:active {
+    color: darkred;
+}
+
+
+
+a:link {
+    color: blue;
+  }
+
+
+
+li{
+    text-align: left;
+
+    
+}
+
+g{
+}
+
+
+.button {
+    color:#08233e;
+    display:inline-block;
+    font:2.4em Futura, ‘Century Gothic’, AppleGothic, sans-serif;
+    font-size:9px;
+    padding:5px;
+    background:url(overlay.png) repeat-x center #ffcc00;
+    background-color:rgba(255,204,0,1);
+    border:1px solid #ffcc00;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -moz-box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);
+    -webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);
+    border-radius:10px;
+    border-bottom:1px solid #9f9f9f;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);
+    cursor:pointer;
+}
+.button:hover {
+    background-color:rgba(255,204,0,0.8);
+}
+
+
+.button1 {
+    color:#08233e;
+    display:inline-block;
+    font:2.4em Futura, ‘Century Gothic’, AppleGothic, sans-serif;
+    font-size:9px;
+    padding:1px;
+    background:url(overlay.png) repeat-x center white;
+    background-color:white;
+    border:1px solid black;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -moz-box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);
+    -webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);
+    border-radius:10px;
+    border-bottom:1px solid #9f9f9f;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,0.5);
+    cursor:pointer;
+}
+.button1:hover {
+    background-color:rgba(255,204,0,0.8);
+}
+
