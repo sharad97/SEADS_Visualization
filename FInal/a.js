@@ -5718,22 +5718,11 @@ var segmentHeight = chart.segmentHeight();
 // call mouseover event
 chart.on("customHover", mouseover(svg, index_one, innerRadius, numSegments, segmentHeight, dataDisplayed));
 
-
-// legend
-var linearV = d3.scale.linear()
-        .domain([0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0 ,3.5, 4.0, 4.5, 5.0])
-        .range(range_blue); // color for range
-
 svg.append("g")
     .attr("class", "legendV")
     .attr("transform", "translate(10,30)");
 
-var legendV = d3.legend.color()
-        .shapeWidth(30)
-        .cells(11)
-     // .labelFormat(d3.format('.3f'))
-        .scale(linearV)
-        .title("in KWh");
+
     
 svg.select(".legendV")
     .call(legendV);
